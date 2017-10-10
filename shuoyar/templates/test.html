@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="keywords" content="关键字">
+	<meta name="description" content="主页80字">
+	<title>我是谁</title>
+	<style>
+		#box1 {
+			width:100px;
+			height: 100px;
+			background-color: green;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	</style>
+</head>
+<body>
+	<div id="box1">
+		拖拽盒子
+	</div>
+
+
+	<script>
+		var movebox = document.getElementById("box1");
+		movebox.onmousedown = move;
+			// alert(movebox);
+	function move(e) {
+			alert(movebox.offsetLeft);
+			alert(this);
+			e = e || event ;
+			var initX = e.clientX;
+			var initY = e.clientY;
+			var boxLeft = movebox.offsetLeft;
+			var boxTop = movebox.offsetTop;
+			document.onmousemove = function(e) {
+				e = e || event ;
+				var moveX = e.clientX;
+				var moveY = e.clientY;
+				var changeX = moveX - initX;
+				var changeY = moveY - initY;
+				movebox.style.left = boxLeft + changeX + "px";
+				movebox.style.top = boxTop + changeY + "px"; 
+
+				document.onmouseup = function() {
+					document.onmousemove = null;
+				};
+			};
+		};
+
+
+
+		// var box1 = document.getElementById("box1");
+		// box1.onmouseup = click1;
+	
+/*		function click1(e) {
+			e = e || event ;
+			console.log(e);	
+			for (var i in e) {
+				console.log(i);
+				}
+			
+		}*/
+/*		document.onmousemove = function(e) {
+			e = e || event ;
+			for (var i in e) {
+				console.log(i+"==="+e[i]);
+				
+			}
+		}*/
+
+
+/*		var box = document.getElementById("box1");
+		alert(box.attributes);
+		console.log(box.attributes);
+		alert(box.children);
+		console.log(box.children);
+		console.log(box.childNodes);
+
+		function nextElement (dom) {
+			return dom.nextElementSibling === undefined ? dom.nextSibling : dom.nextElementSibling;
+			// body... 
+		};
+		alert(nextElement(box));
+
+  		function previousElement (dom) {
+  			return dom.previousElementSibling ===undefined ? dom.previousSibling :dom.previousElementSibling; 
+  		};
+  		alert(previousElement(box1));
+
+  		alert(box.parentNode);
+
+  		var fatherbox = box.parentNode;
+
+
+  		var link = document.createElement("p");
+  		link.className = "link1";
+  		link.id = "123";
+  		link.name = "shit";
+  		link.innerHTML = "插入的标签";
+  		link.style= "display:block;background-color:green";
+  		var link2 = document.createElement("p");
+  		link2.className = "link2";
+  		fatherbox.appendChild(link);
+
+
+  		fatherbox.insertBefore(link2,box);
+  		// fatherbox.removeChild(box);*/
+
+
+/*		alert('time');
+	var date = new Date();
+	var timestamp = date;
+	var timestamp = date.getTime();
+	var year = date.getFullYear();
+	var month = date.getMonth();
+	var day = date.getDay();
+	var hours = date.getHours();
+	var minute = date.getMinutes();
+	var second = date.getSeconds();
+	alert(date.getMonth());
+	alert(year+"年"+(month+1)+"月"+day+"日"+hours+"点"+minute+"分");*/
+
+
+
+
+	</script>
+</body>
+</html>

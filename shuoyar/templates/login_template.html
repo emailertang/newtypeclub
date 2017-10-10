@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="keywords" content="关键字">
+	<meta name="description" content="主页80字">
+	<title>登录表单</title>
+	<style>
+		*{
+			padding: 0;
+			margin:0;
+			box-sizing: 0;
+			border:0;
+			box-sizing: border-box;
+			text-decoration: none;
+		}
+		.btn_login {
+			display: inline-block;
+			width: 300px;
+			margin:30px;
+			background-color: #4CAF50; 
+			text-align: center;
+		}
+		.btn_login a {
+			display: block;
+			font-size: 30px;
+			line-height: 60px;
+			color:black;
+		}
+		.log_wrap {
+			position: fixed;
+			top: 0;
+			left:0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0,0,0,0.4);
+			z-index: 100000;
+		}
+		.log_form {
+			display: block;
+			position: relative;
+			top: 30%;
+			width: 500px;
+			margin:0px auto 0px auto;
+			padding: 20px;
+			background-color: #fefefe;
+			border: 0px solid transparent;
+			border-radius: 3px;
+		}
+		.form_wrap1 {
+			display: block;
+			padding: 5px;
+			
+		}
+		.form_wrap1 span {
+			display: inline-block;
+		}
+		.form_wrap1 i {
+			display: inline-block;
+			width: 17px;
+			height: 17px;
+			background-image: url(../static/img/close001.png);
+			background-size: 17px;
+			cursor: pointer;
+			float: right;
+		}
+
+		.form_wrap2 {
+			margin: 10px 30px 10px 30px;
+			padding: 5px;
+			border-bottom: 1px solid #ccc;
+
+		}
+		.form_wrap2 input {
+			line-height: 30px;
+			font-size: 16px;
+			margin-left: 10px;
+			outline: none;
+		}
+		#log_icon1 {
+			display: inline-block;
+			height: 20px;
+			width: 20px;
+			background-image: url(../static/img/icon.png);
+			background-position: -326px -283px;
+			vertical-align: text-bottom;
+		}
+		#log_icon2 {
+			display: inline-block;
+			height: 20px;
+			width: 20px;
+			background-image: url(../static/img/icon.png);
+			background-position: -352px -50px;
+			vertical-align: text-bottom;
+		}
+		.form_wrap3 {
+			margin:20px 30px 20px 30px;
+		}
+		.form_wrap3 a {
+			float: right;
+			color: #1B66C7;
+		}
+		#log_btn {
+			display: block;
+			margin:0px auto 0px auto;
+			width:400px;
+			padding: 15px;
+			cursor: pointer;
+			font-size: 16px;
+			font-weight: 700px;
+			color: #fff;
+			background-color: #3f89ec;
+			border: 0px solid transparent;
+			border-radius: 4px;
+		}
+		.form_wrap4 {
+			margin: 20px 30px 20px 30px;
+		}
+		.form_wrap4 a:first-child{
+			float: right;
+			color: #1B66C7;
+		}
+	</style>
+</head>
+<body>
+	<div class="btn_login">
+		<a onclick="document.getElementById()" href="javascript:void(0)">登录</a>
+	</div>
+	<div id="login1" class="log_wrap">
+		<form class="log_form" action="">
+			<div class="form_wrap1">
+				<span>登录</span>
+				<i></i>
+			</div>
+			<div class="form_wrap2">
+				<label id="log_icon1" for="username"></label><input type="text" id="username" value="请输入用户名" size="40">	
+			</div>
+			<div class="form_wrap2">
+				<label id="log_icon2" for="password"></label><input type="password" id="password" value="" size="40">
+			</div>
+			
+			<div class="form_wrap3">
+				<input type="checkbox" name="" value="" id="checkbox"> <label for="checkbox">自动登录</label> 
+				<a href="">忘记密码</a>
+			</div>
+			<input type="submit" value="登录" id="log_btn">
+			<div class="form_wrap4">
+				<a href="">第三方登录</a>
+				<a href="">注册</a>
+			</div>	
+		</form>
+	</div>
+</body>
+</html>

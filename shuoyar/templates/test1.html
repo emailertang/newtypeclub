@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="keywords" content="关键字">
+	<meta name="description" content="主页80字">
+	<title>js测试</title>
+	<style>
+		.slideshow_wrap {
+			display: block;
+			position: relative;
+			width: 600px;
+			margin:0px auto 0px auto;
+
+		}
+		.myslids {
+			display: none;
+			text-align: center;
+		}
+		.fade {
+			position: relative;
+			-webkit-animation:fade 1.5s ;
+			animation: fade 1.5s ;
+			/*-webkit-transform: scaleY(100%);*/
+		}
+		@-webkit-keyframes fade {
+			/*from {height:0px;} to{height:1000px;}*/
+			from {opacity: 0.4;} to { opacity: 1; }
+		}
+		@keyframes fade {
+			/*from {height:0px;} to{height:1000px;}*/
+			from {opacity: 0.4;} to { opacity: 1; }
+		}
+		.btn_prev,.btn_next {
+			cursor: pointer;
+			position: absolute;
+			top: 50%;
+			margin-top:-39px;
+			padding:20px;
+			font-size: 19px;
+			text-decoration: none;
+			vertical-align: middle;
+			transition: all 0.3s;
+/*			color:white;*/
+			/*background-color:#D8D0D0;*/
+		}
+		.btn_next {
+			right: 0px;
+		}
+		.btn_prev:hover,.btn_next:hover {
+			background-color: rgba(171,171,171,0.8);
+		}
+		.dot_wrap {
+			margin-top: 10px;
+			text-align: center;
+
+		}
+		.dot {
+			display: inline-block;
+			height: 15px;
+			width: 15px;
+			margin:0px 4px;
+			background-color: #bbb;
+			border:1px solid transparent;
+			border-radius:15px;
+			transition: all 0.3s;
+		}
+		.active,.dot:hover {
+			background-color:#717171;
+		}
+		.text {
+			position: relative;
+			bottom: 0px;
+			width: 100%;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div>
+	<div class="slideshow_wrap">
+		<div class="myslids fade">
+			<img src="../static/img/slideshow1.jpg" alt="show" width="100%" height="100%">
+			<div class="text">
+				金鱼1
+			</div>
+		</div>
+		<div class="myslids fade">
+			<img src="../static/img/slideshow2.jpg" alt="show" width="50%" height="50%">
+			<div class="text">
+				金鱼2
+			</div>				
+		</div>
+		<div class="myslids fade">
+			<img src="../static/img/slideshow3.jpg" alt="show" width="50%" height="50%">
+			<div class="text">
+				金鱼3
+			</div>				
+		</div>
+		<div class="myslids fade">
+			<img src="../static/img/slideshow4.jpg" alt="show" width="50%" height="50%">
+			<div class="text">
+				金鱼4
+			</div>				
+		</div>
+		<a class="btn_prev" onclick="plusSlide(-1)" href="">❮</a>
+		<a class="btn_next" onclick="plusSlide(1)" href="">❯</a>
+		<div class="dot_wrap">
+			<span onclick="currentSlide(1)" class="dot"></span>
+			<span onclick="currentSlide(2)" class="dot"></span>
+			<span onclick="currentSlide(3)" class="dot"></span>
+			<span onclick="currentSlide(4)" class="dot"></span>			
+		</div>
+	</div>
+</div>
+
+
+<script>
+	var slideIndex = 1;
+	showSlide(slideIndex);
+	function currentSlide (n) {
+		showSlide(slideIndex = n);
+	}
+	function plusSlide(n) {
+		showSlide(slideIndex +=1);
+	}
+	function showSlide (n) {
+		var slides = document.getElementsByClassName("myslids");
+		var i;
+		if (n<1) {
+			slideIndex = slides.length;
+		}
+		if (n > slides.length) {
+			slideIndex = 1;
+		}
+		for (i=0;i<slides.length;i++){
+			if (i == slideIndex-1){
+				slides[i].style.display = "block";
+			} 
+			else {
+				slides[i].style.display = "none";
+			}
+		}
+	}
+</script>
+</body>
+</html>
