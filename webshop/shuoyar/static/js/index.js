@@ -52,10 +52,32 @@ $(document).click(function(event) {
 
 $(".comment_btn").each(function(i,el) {
 	$(el).click(function(event) {
-		console.log($(".mainsc_content_comment").eq(i));
+		// console.log($(".mainsc_content_comment").eq(i));
 		$(".mainsc_content_comment").eq(i).slideToggle(300);
 	});
 });
 
-var $a ="king";
-alert($(a));	
+// function test() {
+// 	var xmlhttp;
+// 	if (window.XMLHttpRequest) {
+// 		xmlhttp = new XMLHttpRequest();
+// 	}
+// 	else {
+// 		xmlhttp = new ActiveObject("Microsoft.XMLHTTP");
+// 	}
+// 	xmlhttp.onreadystatechange = function () {
+// 		if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+// 			alert(xmlhttp.responseText);
+// 		}
+// 	}
+// 	xmlhttp.open("get", "/ajax/ajax_add", true);
+// 	xmlhttp.send();
+
+// }
+$("#test1").click(function(){
+	$.get("/ajax/ajax_add",function(a){
+		alert(a);
+	});
+});
+
+

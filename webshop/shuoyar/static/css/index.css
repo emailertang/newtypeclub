@@ -32,9 +32,11 @@ body {
 /*--===========================================--*/
  .nav_wrap {
 	display: block;
-	min-width: 1163px;
+	min-width: 100%;
+	position: fixed;
+	z-index: 1600;
     height:42px;
-    background-color:#24292e;
+    background-color:rgba(0,0,0,0.7);
 } 
 .nav_wrap_inner {
 	margin: 0px auto 0px auto;
@@ -280,7 +282,7 @@ body {
 /*--===========================================--*/
 .header_wrap
 {
-/*	height: 389px;*/
+	height: 100%;
 	min-width: 1163px;
 	background-color: #133d67;
 	position: relative;
@@ -311,7 +313,7 @@ body {
 	{
 		display: inline-block;		
 		width: 463px;
-		height: 349px;
+/*		height: 349px;*/
 		margin:30px 0px 30px 0px ; 
 		font-size: 25px;
 		position: relative;
@@ -396,7 +398,6 @@ body {
 .maintop_wrap {
 	display: block;
 	min-width: 1163px;
-	height: 60px;
 	background-color: #f1f2f3;
 	margin: 0px;
 	font-size: 15px;
@@ -427,7 +428,7 @@ body {
 		font-size: 20px;
 		color: white;
 /*		line-height: 25px;*/
-		padding: 0px 80px 0px 80px;
+		padding: 0px 39px 0px 50px;
 		display: inline-block;
 		border-style: none;
 		}
