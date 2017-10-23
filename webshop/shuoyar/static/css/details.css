@@ -1,0 +1,29 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2017-10-23 13:00:21
+ * @version $Id$
+ */
+.header_wrap {
+/*	height: 200px;*/
+	background-color: #133d67;
+}
+.wrap_inner>span {
+	display: block;
+	padding:50px;
+	font-size: 50px;
+	color: #fff;
+}
+.content_left_wrap {
+	height: 2000px;
+	display: inline-block;
+	width: 24%;
+	background-color: #6B6666;
+}
+.content_right_wrap {
+	height: 2000px;
+	display: inline-block;
+	width: 74%;
+	background-color:#1E898F;
+}

@@ -8,210 +8,7 @@
  /* ========================== */
 /* ========= global  ========= */
 /* ========================== */
- *{
-	padding: 0;
-	margin: 0;
-	border: 0;
-	outline: 0;
-	vertical-align: baseline;
-	box-sizing: border-box;
-}
-a{
-	text-decoration: none;
-	color: black;
-}
-li{
-	list-style: none;
-}
-body {
-	font:'Helvetica Neue', 
-	Helvetica, Arial, 
-	'Microsoft Yahei', 
-	'Hiragino Sans GB', 
-	'Heiti SC', 
-	'WenQuanYi Micro Hei',
-	 sans-serif;
-
-}
-
-/* ========================== */
-/* ========= nav  =========== */
-/* ========================== */
-.nav_wrap {
-	display: block;
-	min-width: 100%;
-	position: fixed;
-	z-index: 1600;
-    height:42px;
-    background-color:rgba(0,0,0,0.6);
-} 
-	.wrap_inner {
-	margin: 0px auto;
-	width: 1160px;
-	position: relative;
-	}
-		.nav_centerwrap {
-			display: block;
-			text-align: center;
-		}
-		.nav_navtop { 
-		display: inline-block;
-		margin:0px 0px;
-		padding:0px auto 0px 0px;
-		vertical-align: top;
-
-		}
-		    .nav_navtop ul {
-		    }
-			.nav_navtop>ul>li {
-				float: left;
-				padding:0px 0px;
-			}
-				.nav_navtop>ul>li>a {
-					display: block;
-					line-height: 42px;
-					margin: 0px;
-					padding: 0px 10px 0px 10px;
-					font-size: 13px;
-					color: #DCEBEB ;
-					transition: all 0.3s;
-				}
-				.nav_navtop>ul>li a:hover {
-				    background-color: #555;
-				    color: white;
-				 }	
-		.nav_logo {
-		display: inline-block;	
-		vertical-align: top;
-		transition: all 0.3s;
-		}
-		.nav_logo>a {
-			display:block; 			
-			padding: 0px 0px 0px 0px;
-			color: #FFFFFF;
-			line-height: 42px;
-			font-size: 25px; 
-
-
-		}
-		.nav_logo:hover {
-			background-color: #257653;
-		}
-/*		======== login tab ========*/ 
-		.nav_wrap_login {
-			display: block;
-			position: absolute;
-			top: 0px;
-			right: 0px;
-			margin:0px 10px;
-			float: right;
-		}
-		.nav_wrap_login a {
-			display: inline-block;
-			padding: 0px 5px;
-			line-height: 42px;
-			color:#fff; 
-			font-size: 14px;			
-		}
-		.nav_wrap_login span {
-			display: inline-block;
-			color:#fff;
-		}
-		.log_wrap {
-			display: none;
-			position: fixed;
-			top: 0;
-			left:0;
-			width: 100%;
-			height: 100%;
-			background-color: rgba(0,0,0,0.4);
-			z-index: 100000;
-		}
-		.log_form {
-			display: block;
-			position: relative;
-			top: 30%;
-			width: 500px;
-			margin:0px auto 0px auto;
-			padding: 20px;
-			background-color: #fefefe;
-			border: 0px solid transparent;
-			border-radius: 3px;
-		}
-		.form_wrap1 {
-			display: block;
-			padding: 5px;
-			
-		}
-		.form_wrap1 span {
-			display: inline-block;
-			font-size:16px;
-		}
-		.form_wrap1 i {
-			display: inline-block;
-			width: 17px;
-			height: 17px;
-			background-image: url(../img/close001.png);
-			background-size: 17px;
-			cursor: pointer;
-			float: right;
-		}
-
-		.form_wrap2 {
-			margin: 10px 30px 10px 30px;
-			padding: 5px;
-			border-bottom: 1px solid #ccc;
-
-		}
-		.form_wrap2 input {
-			line-height: 30px;
-			font-size: 16px;
-			margin-left: 10px;
-			outline: none;
-		}
-		#log_icon1 {
-			display: inline-block;
-			height: 20px;
-			width: 20px;
-			background-image: url(../img/icon.png);
-			background-position: -326px -283px;
-			vertical-align: text-bottom;
-		}
-		#log_icon2 {
-			display: inline-block;
-			height: 20px;
-			width: 20px;
-			background-image: url(../img/icon.png);
-			background-position: -352px -50px;
-			vertical-align: text-bottom;
-		}
-		.form_wrap3 {
-			margin:20px 30px 20px 30px;
-		}
-		.form_wrap3 a {
-			float: right;
-			color: #1B66C7;
-		}
-		#log_btn {
-			display: block;
-			margin:0px auto 0px auto;
-			width:400px;
-			padding: 15px;
-			cursor: pointer;
-			font-size: 16px;
-			font-weight: 700px;
-			color: #fff;
-			background-color: #3f89ec;
-			border: 0px solid transparent;
-			border-radius: 4px;
-		}
-		.form_wrap4 {
-			margin: 20px 30px 20px 30px;
-		}
-		.form_wrap4 a:first-child{
-			float: right;
-			color: #1B66C7;
-		}
+ 
 /* ========================== */
 /* ========= header  ======== */
 /* ========================== */
@@ -251,16 +48,24 @@ body {
 /* ========================== */
 .main_wrap_1 {
 	height: 400px;
-	background: #d4d4d4;
+	background: #d1d1d1;
 }
 	.content_1 {
 		display: inline-block;
 		margin: 50px 50px;
 		width: 600px;
 	}
-	.content_1 p,a {
+	.content_1 p {
 		line-height: 30px;
 		font-size: 20px;
+	}
+	.content_1 a {
+		display: inline-block;
+		margin-top:20px;
+		padding: 15px 10px; 
+		background-color: #ed1c24;
+		font-size: 25px;
+		color: #fff;
 		transition: all 0.3s;
 	}
 	.content_1 a:hover {
@@ -275,14 +80,21 @@ body {
 		margin: 50px 50px;
 		width: 600px;
 	}
-	.content_2 p,a {
+	.content_2 p {
 		line-height: 30px;
 		font-size: 20px;
-		transition: all 0.3s;
 		color: white;
 	}
+	.content_2 a {
+		display: inline-block;
+		margin-top:20px;
+		padding: 15px 10px; 
+		background-color: #133d67;
+		font-size: 25px;
+		color: #fff;
+		transition: all 0.3s;
+	}
 	.content_2 h1 {
-
 	color: white;
 	}
 	.content_2 a:hover {
@@ -297,15 +109,22 @@ body {
 		margin: 50px 50px;
 		width: 600px;
 	}
-	.content_3 p,a {
+	.content_3 p {
 		line-height: 30px;
 		font-size: 20px;
-		transition: all 0.3s;
 		color: white;
 	}
 	.content_3 h1 {
-
 	color: white;
+	}
+	.content_3 a {
+		display: inline-block;
+		margin-top:20px;
+		padding: 15px 10px; 
+		background-color: #3a3837;
+		font-size: 25px;
+		color: #fff;
+		transition: all 0.3s;
 	}
 	.content_3 a:hover {
 		background-color: #555;
@@ -314,19 +133,3 @@ body {
 /* ========================== */
 /* ========= footer  ========== */
 /* ========================== */
-.footer_wrap {
-	background-color: #133d67;
-}
-	.footer_content ul,li{
-		display: inline-block;
-	}	
-	.footer_content a{
-		padding: 10px 20px;
-		float: left;
-		font-size: 16px;
-		line-height: 40px;
-		transition: all 0.3s;
-	}
-	.footer_content a:hover{
-		color:#DE2121;
-	}

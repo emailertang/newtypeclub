@@ -21,5 +21,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.index),
     url(r'^temp/$',views.temp),
-    url(r'^ajax/ajax_add',views.ajax_add)
+    url(r'^ajax/ajax_add',views.ajax_add),
+    url(r'^projectdetails/$',views.details)
 ]

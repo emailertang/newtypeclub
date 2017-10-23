@@ -7,12 +7,13 @@
 	<meta name="keywords" content="关键字">
 	<meta name="description" content="主页80字">
 	<title>NewTypeClub</title>
+	<link rel="stylesheet" href="{% static '/css/initial.css'%}">
 	<link rel="stylesheet" href="{% static '/css/index.css'%}">
 	<script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 <body>
 <!-- =========== nav =========== -->
-	<div class="nav_wrap">
+	<header class="nav_wrap">
  		<div class="wrap_inner">
  			<div class="nav_centerwrap">
 				<div class="nav_navtop">
@@ -34,8 +35,21 @@
  				
  			</div>
 <!-- 			=======	Begin login ===========	 -->
-			<div class="nav_wrap_login">
+			<div class="nav_wrap_login" style="display: none;">
 				<a onclick="document.getElementById('login1').style.display='block'" href="javascript:void(0)">登录</a><span>|</span><a href="">注册</a>
+			</div>
+			<div class="usr_menu_wrap">
+				<a id="usr_icon" href=""><img src="{%static '/img/shuoyar.jpg'%}" alt=""><span>3</span></a>
+				<a id="usr_more" href=""><i></i></a>
+				<div class="usr_menu">
+					<ul>
+						<li><a href=""></a>个人信息ID</li>
+						<li><a href=""></a>收藏</li>
+						<li><a href=""></a>短消息</li>
+						<li><a href=""></a>设置</li>
+						<li><a href=""></a>注销</li>
+					</ul>
+				</div>		
 			</div>
 			<div id="login1" class="log_wrap">
 				<form class="log_form" action="">
@@ -61,9 +75,8 @@
 					</div>	
 				</form>
 			</div>
-
 		</div>	 
-	</div>
+	</header>
 <!-- 	======= nav end =========== -->
 <!--     ======== header begin ========== -->
 	<div class="header_wrap">
@@ -88,23 +101,12 @@
 		<div class="wrap_inner">
 			<div class="content_1">
 				<h1>新人类补完计划？</h1>
-				<p>人类正在被旧的定义束缚，日渐走向封闭的未来。革新在这个星球的历史中是常态，故为何不做一些尝试，你所厌恶的既定规则，改变旧的定义旧的世界，建立新的理想世界，借由对人类进行重新定义的过程来改变世界。</p>
-				<a href="">如果你想知道更多关于计划的细节，或者帮助我完善计划的细节，请点击我。</a>
-<!-- 				<ul>
-					<li>无聊的毫无营养的对话</li>
-					<li>固定的人生</li>
-					<li>理所应当的规则</li>
-					<li>盲目跟随的大流</li>
-					<li>毫无思考的空洞内心</li>
-					<li>在日常中沉沦，无法追求有趣事件的事实</li>
-				</ul>
-				<h2>那么与其相对的就是新人类</h2>
-				<ul>
-					<li>旧世界最让我们无法忍受的一点即是无趣</li>
-					<li>无趣的人生，无趣的规则，无趣的人，无趣的世界，搞不懂人们都在追求什么，如同行尸走肉般活着</li>
-					<li>为了物质，欲望，权力</li>
-					<li>但旧人类仍然有有趣的部分：动漫，二次元，电影，音乐，创作者，由创作者将音符故事和画面组合起来的另一个世界</li>
-				</ul> -->
+				<p>人类正在被旧的定义束缚，日渐走向封闭的未来</p>
+				<p>革新在这个星球的历史中是常态，故为何不做一些尝试</p>
+				<p>你所厌恶的既定规则，改变旧的定义旧的世界</p>
+				<p>建立新的理想世界，借由对人类进行重新定义的过程来改变世界</p>
+				<p>如果你想知道更多关于计划的细节，或者帮助我完善计划的细节</p>
+				<a href="">查看新人类补完计划</a>
 			</div>
 		</div>
 	</div>

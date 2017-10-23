@@ -7,8 +7,8 @@ def index(request):
     return render(request, 'index.html')
 def temp(request):
     return render(request,'temp.html')
-def detail(request):
-    return render(request, 'detail.html')
+def details(request):
+    return render(request, 'details.html')
 def ajax_add(request):
     a = "helloworld"
     return HttpResponse(a)
