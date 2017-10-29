@@ -9,6 +9,8 @@ def temp(request):
     return render(request,'temp.html')
 def details(request):
     return render(request, 'details.html')
+def current_defines(request):
+    return render(request,'current_defines.html')
 def ajax_add(request):
     a = "helloworld"
     return HttpResponse(a)

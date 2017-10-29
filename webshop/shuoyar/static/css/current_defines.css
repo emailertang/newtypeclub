@@ -1,0 +1,27 @@
+@charset "UTF-8";
+/**
+ * current_defines
+ * @authors Your Name (you@example.org)
+ * @date    2017-10-27 20:33:42
+ * @version $Id$
+ */
+.main_wrap_left {
+	width: 300px;
+	height: 1000px;
+	float: left;
+	background-color: #d1d1d1;
+}
+.main_wrap_right{
+	height: 1000px;
+	margin: 42px 0px 0px 300px;
+}
+.content-1{
+	height: 400px;
+	float: left;
+	background-color: #7063B4;
+}
+.content-2{
+	height: 200px;
+	float: left;
+	background-color: #f134;
+}
