@@ -45,26 +45,80 @@ h1{
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
 
+
+.b_color_1 {
+	background-color: #257653;
+}
+.b_color_2 {
+	background-color: #8e44ad;
+}
+.b_color_3 {
+	background-color: #e64a19;
+}
+.b_color_4 {
+	background-color: ;
+}
+.b_color_5 {
+	background-color: #133d67;
+}
+
 /* ========================== */
 /* ========= nav  =========== */
-/* ========================== */
-.nav_wrap {
-	display: block;
-	min-width: 100%;
-	position: fixed;
-	top: 0;
-	z-index: 1600;
-    height:42px;
-    background-color:rgba(0,0,0,0.8);
+/* ========================== */ 
+.navbar-default {
+  background-color: rgba(0,0,0,0.8);
+  border-color: rgba(0,0,0,0.8);
+}
+#navbar_l {
+	position: absolute;
+	right: 50%;
+	margin-right: 100px;
+}
+#navbar_m {
+	position: absolute;
+	left: 50%;	
+	margin-left: -84px;
+	font-size: 20px;
+}
+#navbar_l a {
+	color: #fff;
+	transition: all 0.3s;
+}
+#navbar_m a {
+	font-size: 26px;
+ 	color: #fff;
+}
 
-} 
+#navbar_r {
+	position: absolute;
+	left: 50%;	
+	margin-left: 100px;
+}
+#navbar_r a {
+	color: #fff;
+	transition: all 0.3s;
+}
+#navbar_l a:hover {
+	color: #fff;
+	background-color: #555;
+}
+#navbar_m a:hover {
+	color: #fff;
+	background-color: #555;
+}
+#navbar_r a:hover {
+	color: #fff;
+	background-color: #555;
+}
+
 	.wrap_inner {
 	margin: 0px auto;
 	width: 1160px;
 	position: relative;
 	}
 		.nav_centerwrap {
-			display: block;
+			/*display: flex;*/
+			/*justify-content: center;*/
 			text-align: center;
 		}
 		.nav_navtop { 
@@ -234,7 +288,7 @@ h1{
 			top: 0px;
 			right: 0px;
 			margin:0px 10px;
-			float: right;
+			/*float: right;*/
 		}
 			#usr_icon {
 				display: inline-block;

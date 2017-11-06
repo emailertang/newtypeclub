@@ -6,6 +6,7 @@
 	<meta name="keywords" content="关键字">
 	<meta name="description" content="主页80字">
 	<title>我是谁</title>
+		<script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
 	<style>
 		#box1 {
 			width:100px;
@@ -15,43 +16,84 @@
 			top: 0;
 			left: 0;
 		}
+		.class1 {
+			background-color: #d1d1d1;
+		}
 	</style>
 </head>
 <body>
-	<div id="box1">
-		拖拽盒子
+
+	<p></p>
+	<p></p>
+	<p></p>
+	<p></p>
+	<p></p>
+	<p></p>
+	<p></p>
+	<p></p>
+	<p></p>
+	<p></p>
+	<div class="box2"></div>
+	<div class="box3">第三个实例</div>
+	<div class="box4" id="key333">
+		324234234234234234
+		<div id="key123">第四个实例</div>
+		<div>jfiejfie</div>
 	</div>
+	<div class="box4"><div>第四个实例</div></div>
+	<div class="box4"><div>第四个实例</div></div>
+	<button id="btn1">button</button>
 
-
+	
 	<script>
-		var movebox = document.getElementById("box1");
-		movebox.onmousedown = move;
-			// alert(movebox);
-	function move(e) {
-			alert(movebox.offsetLeft);
-			alert(this);
-			e = e || event ;
-			var initX = e.clientX;
-			var initY = e.clientY;
-			var boxLeft = movebox.offsetLeft;
-			var boxTop = movebox.offsetTop;
-			document.onmousemove = function(e) {
-				e = e || event ;
-				var moveX = e.clientX;
-				var moveY = e.clientY;
-				var changeX = moveX - initX;
-				var changeY = moveY - initY;
-				movebox.style.left = boxLeft + changeX + "px";
-				movebox.style.top = boxTop + changeY + "px"; 
+		window.open("https://www.baidu.com");
+		console.log(window.closed);
+		$("p").html("<div>box</div>");
+		$("p:eq(3)").addClass('class1');
+		$("p:eq(3)").prepend('<div>kaiwanxiao1</div>');
+		$(".box2").attr({"id":"hfeji","href":"http://www.baidu.com"});
+		$(".box2").append($(".box3").clone());
+		$(".box4").first().prop('click','a');
+		$($('.box2').get()).insertAfter(".box4");
+		$('.box4').prepend('<img src="fjeijfiejfiefefe" alt="">');
+		console.log($('.box4').get(1));
+		$('#btn1').click(function(event) {
+			$('.box4').fadeToggle('slow');
+		});
 
-				document.onmouseup = function() {
-					document.onmousemove = null;
-				};
+
+	</script>
+
+
+<!-- 	<script>
+	var movebox = document.getElementById("box1");
+	movebox.onmousedown = move;
+		// alert(movebox);
+function move(e) {
+		alert(movebox.offsetLeft);
+		alert(this);
+		e = e || event ;
+		var initX = e.clientX;
+		var initY = e.clientY;
+		var boxLeft = movebox.offsetLeft;
+		var boxTop = movebox.offsetTop;
+		document.onmousemove = function(e) {
+			e = e || event ;
+			var moveX = e.clientX;
+			var moveY = e.clientY;
+			var changeX = moveX - initX;
+			var changeY = moveY - initY;
+			movebox.style.left = boxLeft + changeX + "px";
+			movebox.style.top = boxTop + changeY + "px"; 
+
+			document.onmouseup = function() {
+				document.onmousemove = null;
 			};
 		};
+	}; -->
 
 
-
+<!-- 
 		// var box1 = document.getElementById("box1");
 		// box1.onmouseup = click1;
 	
@@ -123,9 +165,10 @@
 	alert(date.getMonth());
 	alert(year+"年"+(month+1)+"月"+day+"日"+hours+"点"+minute+"分");*/
 
-
+ -->
 
 
 	</script>
+
 </body>
 </html>

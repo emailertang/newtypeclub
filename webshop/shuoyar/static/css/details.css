@@ -6,7 +6,7 @@
  * @version $Id$
  */
 .header_wrap {
-/*	height: 200px;*/
+	min-width: 1160px;
 	background-color: #133d67;
 }
 .wrap_inner>span {

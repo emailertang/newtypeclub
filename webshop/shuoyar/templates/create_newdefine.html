@@ -1,0 +1,134 @@
+{% load static %}
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="keywords" content="创建新定义">
+	<meta name="description" content="主页80字">
+	<title>创建新定义</title>
+	<link rel="stylesheet" href="{% static '/css/initial.css'%}">
+	<link rel="stylesheet" href="{% static '/css/create_newdefine.css'%}">	
+</head>
+<body>
+	<header class="nav_wrap">
+ 		<div class="wrap_inner nav_centerwrap">
+ <!-- 			<div class="nav_centerwrap"> -->
+				<div class="nav_navtop">
+					<ul>
+						<li><a id="test1" href="{% url 'create_newdefine' %}">创建新定义</a></li>
+						<li><a href="{% url 'current_defines'%}">当前定义树</a></li>
+					</ul>
+				</div> 
+				<div class="nav_logo">
+					<a href="{% url 'index'%}">NewType Club</a>
+				</div>
+				<div class="nav_navtop">
+					<ul>
+						<li><a href="{% url 'project_details'%}">计划概览</a></li>
+						<li><a href="">个人概览</a></li>
+						<li><a href="">News</a></li>
+					</ul>
+				</div>			
+<!--  			</div> -->
+			<div class="nav_wrap_login" style="display: none;">
+				<a onclick="document.getElementById('login1').style.display='block'" href="javascript:void(0)">登录</a><span>|</span><a href="">注册</a>
+			</div>
+			<div class="usr_menu_wrap">
+				<a id="usr_icon" href=""><img src="{%static '/img/shuoyar.jpg'%}" alt=""><span>3</span></a>
+				<a id="usr_more" href=""><i></i></a>
+				<div class="usr_menu" style="display: none;">
+					<ul>
+						<li><a href=""></a>个人信息ID</li>
+						<li><a href=""></a>收藏</li>
+						<li><a href=""></a>短消息</li>
+						<li><a href=""></a>设置</li>
+						<li><a href=""></a>注销</li>
+					</ul>
+				</div>		
+			</div>
+			<div id="login1" class="log_wrap">
+				<form class="log_form" action="">
+					<div class="form_wrap1">
+						<span>登录</span>
+						<i onclick="document.getElementById('login1').style.display='none'"></i>
+					</div>
+					<div class="form_wrap2">
+						<label id="log_icon1" for="username"></label><input type="text" id="username" value="" size="40">	
+					</div>
+					<div class="form_wrap2">
+						<label id="log_icon2" for="password"></label><input type="password" id="password" value="" size="40">
+					</div>
+					
+					<div class="form_wrap3">
+						<input type="checkbox" name="" value="" id="checkbox"> <label for="checkbox">自动登录</label> 
+						<a href="">忘记密码</a>
+					</div>
+					<input type="submit" value="登录" id="log_btn">
+					<div class="form_wrap4">
+						<a href="">第三方登录</a>
+						<a href="">注册</a>
+					</div>	
+				</form>
+			</div>	 
+ 		</div>
+ 	</header>
+<!-- 	========= header begin  =========== -->
+	 <div class="header_wrap">
+ 		<div class="wrap_inner">
+ 			<span>真名</span>	
+ 		</div>
+ 	</div>
+ <!-- ============ header end  ========= -->	
+<!-- ============= content begin  ============= -->
+	<div class="content_wrap">
+		<div class="wrap_inner">
+			<div class="content_wrap_left">
+				<ul>
+					<li>内容</li>
+					<li>阐述</li>
+					<li>方法</li>
+					<li>实例</li>
+					<li>进程</li>
+					<li>分支</li>
+				</ul>
+			</div>
+			<div class="content_wrap_right">
+				<div class="content_main">
+					
+				</div>
+				<div class="content_method">
+					
+				</div>
+				<div class="content_instance">
+					
+				</div>
+				<div class="content_progress">
+					
+				</div>
+				<div class="content_banch">
+					
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+ 	<footer class="footer_wrap">
+		<div class="wrap_inner">
+			<div class="footer_content">
+				<ul>
+					<li><a href="">关于我们</a></li>
+					<li><a href="">微博</a></li>
+					<li><a href="">微信号</a></li>
+					<li><a href="">bilibili</a></li>
+					<li><a href="">Team</a></li>
+					<li><a href="">反馈</a></li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+	<script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+
+</body>
+</html>

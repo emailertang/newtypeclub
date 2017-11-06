@@ -333,11 +333,89 @@ $(document).click(function(event) {
 });
 ```
 
+### 元素方法
+
+```javascript
+#=========== 选取元素 =================
+$("div:first")  #第一个元素是div的元素
+$("div:last")	#最后一个元素是div的元素
+$("div:even") #div中的偶数元素
+$("div:odd") 	#div中的奇数元素
+$("div:fist-child")	#第一个子元素是div的元素
+$("div ul")	
+$("div>img")
+$("div+div")
+$("div~a") #同级的a
+$("div:eq(n)") #所有元素集合中的index=n
+$("div:gt(n)") #大于
+$("div:lt(n)") #小于
+
+#=========== 遍历元素 =================
+$("filter").add().add().add() #向集合里添加新元素	
+$("filter").first()	#符合filter的第一个元素
+$("filter").children("#id")	#符合filter的所有子元素
+$("filter").contents()	#符合filter的所有内容，包括text节点
+$("filter").eq()	#符合filter的index=n的元素
+$("filter").each(function) #对符合filter的所有元素执行function
+$("filter").filter("#id",function(){}) #符合filter的元素集合里筛选符合filter的子元素
+$("filter").find("") #符合filter的元素集合里寻找符合filter的元素
+$("filter").has("") #符合filter中返回拥有filter的元素集合
+$("filter").is("") #判断 返回true
+$("filter").next()	#符合filter的同级下一个元素
+$("filter").nextAll()	#符合filter的同级后面的所有元素，可以增加filter
+$("filter").nextUntil("filter") #符合filter的后面的所有元素，直到filter
+$("filter").not("")	#符合filter中移除filter
+$("filter").offsetParent()	#符合filter的元素集合中返回定位的父级元素
+$("filter").parent()
+$("filter").parents()
+$("filter").parentsUntil("filter")
+$("filter").prev()
+$("filter").prevAll()
+$("filter").prevUntil()
+$("filter").siblings() #符合filter的所有同级元素
+$("filter").slice() #符合filter的从n到m之间切片的元素。
+# ==================== 元素操作 ===================
+.html() ## innerHTML
+.css() ##.style
+.addClass() ## 
+.after()  #在节点后增加元素
+.before() #在节点前增加元素
+.append() .appendTo()#在节点内的结尾增加
+.prepend() .prependTo() 
+.attr() #设置节点属性
+.clone() #复制得到一个节点
+.detach()
+.prop()
+.empty()
+$('').insertAfter('')  #在所选节点之后插入内容
+$('').insertBefore('')  #在所选节点之后插入内容
+$("filter").remove()
+$("filter").removeClass()
+$("filter").toggleClass()
+$("filter").removeAttr()
+$("filter").removeProp()
+$("filter").replaceAll('filter')
+$("filter").replaceWith()
+$("filter").text()
+$("filter").val()
+$("filter").get()
+$("filter").index()
+
+# =============== jquery 效果 ====================
+$("filter").animate({style},'slow','linear',function(){})
+$("filter").fadeIn()
+$("filter").fadeOut()
+$("filter").fadeToggle()
+$("filter").slideDown()
+$("filter").slideUp()
+$("filter").slideToggle()
+$("filter").toggle()
+```
+
 
 
 1. 中文文档：jquery.cuishifeng.cn
 2. 使用jquery需要引用jquery方法，在头部引用，link cdn.code.baidu.com
 3. ​
-
 
 

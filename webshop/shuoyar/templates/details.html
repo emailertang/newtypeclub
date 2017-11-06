@@ -10,29 +10,29 @@
 	<link rel="stylesheet" href="{% static '/css/initial.css'%}">
 	<link rel="stylesheet" href="{% static '/css/details.css'%}">
 
-	<script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+
 </head>
 <body>
 	<header class="nav_wrap">
- 		<div class="wrap_inner">
- 			<div class="nav_centerwrap">
+ 		<div class="wrap_inner nav_centerwrap">
+ <!-- 			<div class="nav_centerwrap"> -->
 				<div class="nav_navtop">
 					<ul>
-						<li><a id="test1" href="javascript: void(0);">创建新定义</a></li>
-						<li><a href="">当前定义树</a></li>
+						<li><a id="test1" href="{% url 'create_newdefine' %}">创建新定义</a></li>
+						<li><a href="{% url 'current_defines'%}">当前定义树</a></li>
 					</ul>
 				</div> 
 				<div class="nav_logo">
-					<a href="http://127.0.0.1:8000">NewType Club</a>
+					<a href="{% url 'index'%}">NewType Club</a>
 				</div>
 				<div class="nav_navtop">
 					<ul>
-						<li><a href="">计划概览</a></li>
+						<li><a href="{% url 'project_details'%}">计划概览</a></li>
 						<li><a href="">个人概览</a></li>
 						<li><a href="">News</a></li>
 					</ul>
 				</div>			
- 			</div>
+<!--  			</div> -->
 			<div class="nav_wrap_login" style="display: none;">
 				<a onclick="document.getElementById('login1').style.display='block'" href="javascript:void(0)">登录</a><span>|</span><a href="">注册</a>
 			</div>
@@ -154,5 +154,6 @@
 			</div>
 		</div>
 	</footer>
+	<script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
 </body>
 </html>

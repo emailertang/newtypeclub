@@ -1,0 +1,14 @@
+.new {
+    transition: all 0.3s;
+    background-color: #d1d1d1;
+    border-radius: 0px;
+}
+.nav-tabs > li > a {
+  margin-right: 2px;
+  line-height: 1.42857143;
+  border: 1px solid transparent;
+  border-radius: 0px 0px 0 0;
+}
+.self_nav {
+    text-align: center;
+}

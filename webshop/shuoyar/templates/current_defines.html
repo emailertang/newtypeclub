@@ -14,26 +14,24 @@
 </head>
 <body>
 	<header class="nav_wrap">
-		<div class="wrap_inner">
-			<div class="nav_centerwrap">
-			<div class="nav_navtop">
-				<ul>
-					<li><a id="test1" href="javascript: void(0);">创建新定义</a></li>
-					<li><a href="">当前定义树</a></li>
-				</ul>
-			</div> 
-			<div class="nav_logo">
-				<a href="http://127.0.0.1:8000">NewType Club</a>
-			</div>
-			<div class="nav_navtop">
-				<ul>
-					<li><a href="http://127.0.0.1:8000/projectdetails/">计划概览</a></li>
-					<li><a href="">个人概览</a></li>
-					<li><a href="">News</a></li>
-				</ul>
-			</div>			
+		<div class="wrap_inner nav_centerwrap">
+				<div class="nav_navtop">
+					<ul>
+						<li><a id="test1" href="{% url 'create_newdefine' %}">创建新定义</a></li>
+						<li><a href="{% url 'current_defines'%}">当前定义树</a></li>
+					</ul>
+				</div> 
+				<div class="nav_logo">
+					<a href="{% url 'index'%}">NewType Club</a>
+				</div>
+				<div class="nav_navtop">
+					<ul>
+						<li><a href="{% url 'project_details'%}">计划概览</a></li>
+						<li><a href="">个人概览</a></li>
+						<li><a href="">News</a></li>
+					</ul>
+				</div>			
 				
-			</div>
 <!-- 			=======	Begin login ===========	 -->
 			<div class="nav_wrap_login" style="display: none;">
 				<a onclick="document.getElementById('login1').style.display='block'" href="javascript:void(0)">登录</a><span>|</span><a href="">注册</a>
@@ -73,41 +71,236 @@
 						<a href="">第三方登录</a>
 						<a href="">注册</a>
 					</div>	
-				</form>
+				</form> 
 			</div>
-		</div>	 
+		</div>
 	</header>
-	<div class="main_wrap_left">
-		<ul>
-			<li>自我</li>
-			<li>社会性</li>
-			<li>世界</li>
-			<li>科学</li>
-			<li></li>
-		</ul>
-	</div>
-	<div class="main_wrap_right">
-		<div class="col-6 content-1">
-			
+<!-- 	========= header begin  =========== -->
+	 <div class="header_wrap">
+ 		<div class="wrap_inner">
+ 			<span>定义树</span>	
+ 		</div>
+ 	</div>
+ <!-- ============ header end  ========= -->
+	<div class="content_wrap">
+		<div class="wrap_inner">
+			<div class="content_wrap_left">
+				<ul>
+					<li>自我</li>
+					<li>社会性</li>
+					<li>世界</li>
+					<li>科学</li>
+					<li></li>
+				</ul>
+			</div>
+			<div class="content_wrap_right">
+				<div class="content_1 b_color_1">
+					<a href="">
+						<span>真名</span>
+						<div class="content_1_c">
+							<p>不同于父母给予的名字</p>
+							<p>自己给予自己的名字</p>
+							<p>对应着自己的灵魂和自我意识</p>
+							<p>迈出重新定义自我的第一步</p>
+						</div>
+					</a>
+					<div class="content_1_bottom">
+						<a href="">支持度</a>
+						<a href="">完成进度</a>
+						<a href="">参与人数</a>
+						<a href="">趋势</a>
+					</div>					
+				</div>
+				<div class="content_1 b_color_2">
+					<a href="">
+						<span>箴言</span>
+						<div class="content_1_c">
+							<p>贯彻自我的一句话</p>
+							<p>对自我的约束</p>
+							<p>对自己的期望</p>
+							<p>对于真名的拓展</p>
+						</div>
+					</a>
+					<div class="content_1_bottom">
+						<a href="">支持度</a>
+						<a href="">完成进度</a>
+						<a href="">参与人数</a>
+						<a href="">趋势</a>
+					</div>						
+				</div>
+				<div class="content_1 b_color_3">
+					<a href="">
+						<span>纹章 徽记 Logo</span>
+						<div class="content_1_c">
+							<p>不同于父母给予的名字</p>
+							<p>自己给予自己的名字</p>
+							<p>对应着自己的灵魂和自我意识</p>
+							<p>迈出重新定义自我的第一步</p>
+						</div>
+					</a>
+					<div class="content_1_bottom">
+						<a href="">支持度</a>
+						<a href="">完成进度</a>
+						<a href="">参与人数</a>
+						<a href="">趋势</a>
+					</div>						
+				</div>
+				<div class="content_1 b_color_4">
+					<a href="">
+						<span>真名</span>
+						<div class="content_1_c">
+							<p>不同于父母给予的名字</p>
+							<p>自己给予自己的名字</p>
+							<p>对应着自己的灵魂和自我意识</p>
+							<p>迈出重新定义自我的第一步</p>
+						</div>
+					</a>
+					<div class="content_1_bottom">
+						<a href="">支持度</a>
+						<a href="">完成进度</a>
+						<a href="">参与人数</a>
+						<a href="">趋势</a>
+					</div>						
+				</div>
+				<div class="content_1 b_color_1">
+					<a href="">
+						<span>真名</span>
+						<div class="content_1_c">
+							<p>不同于父母给予的名字</p>
+							<p>自己给予自己的名字</p>
+							<p>对应着自己的灵魂和自我意识</p>
+							<p>迈出重新定义自我的第一步</p>
+						</div>
+					</a>
+					<div class="content_1_bottom">
+						<a href="">支持度</a>
+						<a href="">完成进度</a>
+						<a href="">参与人数</a>
+						<a href="">趋势</a>
+					</div>					
+				</div>
+				<div class="content_1 b_color_2">
+					<a href="">
+						<span>真名</span>
+						<div class="content_1_c">
+							<p>不同于父母给予的名字</p>
+							<p>自己给予自己的名字</p>
+							<p>对应着自己的灵魂和自我意识</p>
+							<p>迈出重新定义自我的第一步</p>
+						</div>
+					</a>
+					<div class="content_1_bottom">
+						<a href="">支持度</a>
+						<a href="">完成进度</a>
+						<a href="">参与人数</a>
+						<a href="">趋势</a>
+					</div>						
+				</div>
+				<div class="content_1 b_color_3">
+					<a href="">
+						<span>真名</span>
+						<div class="content_1_c">
+							<p>不同于父母给予的名字</p>
+							<p>自己给予自己的名字</p>
+							<p>对应着自己的灵魂和自我意识</p>
+							<p>迈出重新定义自我的第一步</p>
+						</div>
+					</a>
+					<div class="content_1_bottom">
+						<a href="">支持度</a>
+						<a href="">完成进度</a>
+						<a href="">参与人数</a>
+						<a href="">趋势</a>
+					</div>						
+				</div>
+				<div class="content_1 b_color_4">
+					<a href="">
+						<span>真名</span>
+						<div class="content_1_c">
+							<p>不同于父母给予的名字</p>
+							<p>自己给予自己的名字</p>
+							<p>对应着自己的灵魂和自我意识</p>
+							<p>迈出重新定义自我的第一步</p>
+						</div>
+					</a>
+					<div class="content_1_bottom">
+						<a href="">支持度</a>
+						<a href="">完成进度</a>
+						<a href="">参与人数</a>
+						<a href="">趋势</a>
+					</div>						
+				</div>
+				<div class="content_1 b_color_1">
+					<a href="">
+						<span>真名</span>
+						<div class="content_1_c">
+							<p>不同于父母给予的名字</p>
+							<p>自己给予自己的名字</p>
+							<p>对应着自己的灵魂和自我意识</p>
+							<p>迈出重新定义自我的第一步</p>
+						</div>
+					</a>
+					<div class="content_1_bottom">
+						<a href="">支持度</a>
+						<a href="">完成进度</a>
+						<a href="">参与人数</a>
+						<a href="">趋势</a>
+					</div>					
+				</div>
+				<div class="content_1 b_color_2">
+					<a href="">
+						<span>真名</span>
+						<div class="content_1_c">
+							<p>不同于父母给予的名字</p>
+							<p>自己给予自己的名字</p>
+							<p>对应着自己的灵魂和自我意识</p>
+							<p>迈出重新定义自我的第一步</p>
+						</div>
+					</a>
+					<div class="content_1_bottom">
+						<a href="">支持度</a>
+						<a href="">完成进度</a>
+						<a href="">参与人数</a>
+						<a href="">趋势</a>
+					</div>						
+				</div>
+				<div class="content_1 b_color_3">
+					<a href="">
+						<span>真名</span>
+						<div class="content_1_c">
+							<p>不同于父母给予的名字</p>
+							<p>自己给予自己的名字</p>
+							<p>对应着自己的灵魂和自我意识</p>
+							<p>迈出重新定义自我的第一步</p>
+						</div>
+					</a>
+					<div class="content_1_bottom">
+						<a href="">支持度</a>
+						<a href="">完成进度</a>
+						<a href="">参与人数</a>
+						<a href="">趋势</a>
+					</div>						
+				</div>
+				<div class="content_1 b_color_4">
+					<a href="">
+						<span>真名</span>
+						<div class="content_1_c">
+							<p>不同于父母给予的名字</p>
+							<p>自己给予自己的名字</p>
+							<p>对应着自己的灵魂和自我意识</p>
+							<p>迈出重新定义自我的第一步</p>
+						</div>
+					</a>
+					<div class="content_1_bottom">
+						<a href="">支持度</a>
+						<a href="">完成进度</a>
+						<a href="">参与人数</a>
+						<a href="">趋势</a>
+					</div>						
+				</div>
+			</div>
 		</div>
-		<div class="col-6 content-1">
-			
-		</div>
-		<div class="col-3 content-2">
-			
-		</div>
-		<div class="col-3 content-2">
-			
-		</div>
-		<div class="col-3 content-2">
-			
-		</div>
-		<div class="col-3 content-2">
-			
-		</div>
-		<div class="col-3 content-2">
-			
-		</div>
+		
 	</div>
 
 

@@ -23,7 +23,5 @@ urlpatterns = [
     url(r'^temp/$',views.temp),
     url(r'^ajax/ajax_add',views.ajax_add),
     url(r'^project_details/$',views.details,name="project_details"),
-    url(r'^current_defines/$',views.current_defines,name="current_defines"),
-    url(r'^create_newdefine/$',views.create_newdefine,name="create_newdefine"),
-    url(r'^define_detail/$',views.define_detail,name="define_detail")
+    url(r'^current_defines/$',views.current_defines,name="current_defines")
 ]

@@ -1,10 +1,15 @@
 @charset "UTF-8";
 /**
- * current_defines
+ * 
  * @authors Your Name (you@example.org)
- * @date    2017-10-27 20:33:42
+ * @date    2017-10-30 19:53:17
  * @version $Id$
  */
+ /*===========  create_newdeine ===========*/
+
+
+
+/*=========== header ==========*/
 .header_wrap {
 	background-color: #133d67;
 	min-width: 1160px;
@@ -15,6 +20,9 @@
 	font-size: 50px;
 	color: #fff;
 }
+
+
+
 .content_wrap {
 	padding-top: 5px;
 	background-color: #d1d1d1;
@@ -47,51 +55,29 @@
 	height: 2970px;
 	display: block;
 	margin: 0px 0px 0px 205px;
-	background-color: #fff;
+/*	background-color: #fff;*/
 }
-.content_1{
-	margin: 0px 5px 5px 0px;
+.content_main {
 	position: relative;
-	width: 472px;
-	height: 292px;
-	float: left;
-/*	background-color: #257653;*/
+	width: 100%;
+/*	height: 300px;*/
+	padding: 20px 20px 0px 20px;
 }
-.content_1>a {
-	display: block;
-}
-.content_1 span {
-	display: block;
-	margin: 20px 20px 0px 20px;
-	font-size: 30px;
-	line-height: 50px;
-	border-bottom: 1px solid #eee;
-	transition: all 0.3s;
-} 
-.content_1 span:hover {
-	color: #333;
-	border-bottom: 2px solid #333;
-}
-.content_1 p {
-	margin: 10px 20px 0px 20px;
-
-}
-.content_1_c {
-	overflow:auto;
-}
-.content_1_bottom {
-	width: 472px;
-	position: absolute;
+.content_main_btn {
+/*	position: relative;*/
+	height: 40px;
 	bottom: 0px;
-	background-color: #333;
 }
-.content_1_bottom a {
-	width: 25%;
-	line-height: 42px;
+.content_main_btn span {
 	float: left;
-	transition: all 0.3s;
+	width: 25%;
+	line-height: 40px;
 	text-align: center;
+	cursor: pointer;
+	transition: all 0.3s;
+	background-color: #2b678f;
+	color: #fff;
 }
-.content_1_bottom a:hover {
+.content_main_btn span:hover {
 	background-color: #ed1c24;
 }

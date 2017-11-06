@@ -1,24 +1,156 @@
+{% load static %}
+<!DOCTYPE html>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<title>Examples</title>
-<meta name="description" content="">
-<meta name="keywords" content="">
-<link href="" rel="stylesheet">
-<style>
-	header {
-		position: fixed;
-		background-color: #B9A1A1；
-	}
-	body {
-		height: 1600px;
-	}
-</style>
+	<meta charset="utf-8">
+	<meta name="keywords" content="关键字">
+	<meta name="description" content="主页80字">
+	<title>NewTypeClub</title>
+	<link rel="stylesheet" href="{% static '/css/index.css'%}">
+	<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
+	<link rel="stylesheet" href="{% static '/css/initial.css'%}">
+
 </head>
 <body>
-	<header>woshi</header>
-    
+<!-- =========== nav =========== -->
+	<header class="navbar navbar-default navbar-fixed-top" role="navigation">
+ 		<div class="container">
+<!--  			<div class=""> -->
+				<!-- <div class="nav_navtop "> -->
+					<ul class="nav navbar-nav" id="navbar_l">
+						<li><a id="test1" href="{% url 'create_newdefine' %}">创建新定义</a></li>
+						<li><a href="{% url 'current_defines' %}">当前定义树</a></li>
+					</ul>
+				<!-- </div>  -->
+				<div class="navbar-header" id="navbar_m">
+					<a class="navbar-brand" href="{% url 'index' %}">NewType Club</a>
+				</div>
+				<!-- <div > -->
+					<ul class="nav navbar-nav" id="navbar_r">
+						<li><a href="{% url 'project_details' %}">计划概览</a></li>
+						<li><a href="">个人概览</a></li>
+						<li><a href="">News</a></li>
+					</ul>
+				<!-- </div>			 -->
+ 				
+ 			<!-- </div> -->
+<!-- 			=======	Begin login ===========	 -->
+			<div class="nav_wrap_login" style="display: none;">
+				<a onclick="document.getElementById('login1').style.display='block'" href="javascript:void(0)">登录</a><span>|</span><a href="">注册</a>
+			</div>
+			<div class="usr_menu_wrap">
+				<a id="usr_icon" href=""><img src="{%static '/img/shuoyar.jpg'%}" alt=""><span>3</span></a>
+				<a id="usr_more" href=""><i></i></a>
+				<div class="usr_menu">
+					<ul>
+						<li><a href=""></a>个人信息ID</li>
+						<li><a href=""></a>收藏</li>
+						<li><a href=""></a>短消息</li>
+						<li><a href=""></a>设置</li>
+						<li><a href=""></a>注销</li>
+					</ul>
+				</div>		
+			</div>
+			<div id="login1" class="log_wrap">
+				<form class="log_form" action="">
+					<div class="form_wrap1">
+						<span>登录</span>
+						<i onclick="document.getElementById('login1').style.display='none'"></i>
+					</div>
+					<div class="form_wrap2">
+						<label id="log_icon1" for="username"></label><input type="text" id="username" value="" size="40">	
+					</div>
+					<div class="form_wrap2">
+						<label id="log_icon2" for="password"></label><input type="password" id="password" value="" size="40">
+					</div>
+					
+					<div class="form_wrap3">
+						<input type="checkbox" name="" value="" id="checkbox"> <label for="checkbox">自动登录</label> 
+						<a href="">忘记密码</a>
+					</div>
+					<input type="submit" value="登录" id="log_btn">
+					<div class="form_wrap4">
+						<a href="">第三方登录</a>
+						<a href="">注册</a>
+					</div>	
+				</form>
+			</div>
+		</div>	 
+	</header>
+<!-- 	======= nav end =========== -->
+<!--     ======== header begin ========== -->
+	<div class="header_wrap">
+<!-- 		<div class="wrap_inner"> -->
+			<div class="header_wrap_left">
+				<p>受够了这个糟糕的世界</p>
+				<p>为什么不能按照我们自己方式活着</p>
+				<p>让那些理所当然的规则见鬼去吧</p>
+				<p>我们要按照自己的方式存在</p>
+				<p>请对这绝望的世界抱有一丝希望</p>
+				<p>终结这无聊的世界，这无聊的规则</p>
+				<p>一同创造真正有趣的世界</p>
+				<p>重新定义人类</p>
+				<p>重新定义世界</p>
+				<p>重新定义自我</p>
+				<p>来自异界的异类们啊，谁才是未来，谁才是命运，永恒与永眠，参上</p>
+			</div>
+	</div>
+	<!--     ======== header end ========== -->
+	<!--     ======== main begin ========== -->
+	<div class="main_wrap_1">
+		<div class="wrap_inner">
+			<div class="content_1">
+				<h1>新人类补完计划？</h1>
+				<p>人类正在被旧的定义束缚，日渐走向封闭的未来</p>
+				<p>革新在这个星球的历史中是常态，故为何不做一些尝试</p>
+				<p>你所厌恶的既定规则，改变旧的定义旧的世界</p>
+				<p>建立新的理想世界，借由对人类进行重新定义的过程来改变世界</p>
+				<p>如果你想知道更多关于计划的细节，或者帮助我完善计划的细节</p>
+				<a href="">查看新人类补完计划</a>
+			</div>
+		</div>
+	</div>
+	<div class="main_wrap_2">
+		<div class="wrap_inner">
+			<div class="content_2">
+				<h1>创建新定义</h1>
+				<p>按照你对旧人类的厌恶对立面，或者按照你对新人类的期待，或者说新世界应有的样子提出你的期待。</p>
+				<p>定义应该包括特性和行为：怎样的属性和怎样的行为决定了究竟是旧人类还是新人类</p>
+				<p>包含诸多的分类，我已经列出了初始的，你可以帮我完善它们</p>
+				<p></p>
+				<a href="">创建属于你的定义</a>
+			</div>
+		</div>
+	</div>
+	<div class="main_wrap_3">
+		<div class="wrap_inner">
+			<div class="content_3">
+				<h1>将定义变成实例</h1>
+				<p>空泛的争论无法改变世界，同样空泛的定义只是自我满足</p>
+				<p>将定义在现实中践行，前提却是定义能够有效</p>
+				<p>践行的过程也是将停留在思考的理念变为真正新人类的步骤</p>
+				<p>践行的过程中可以影响周围的人和世界</p>
+				<p>将你实例化的过程发布出来，其他新人类会给予评价和认同，如果认同度足够，定义既被确定</p>
+				<a href="">浏览当前的定义树</a>				
+			</div>
+		</div>
+	</div>
+		<!--     ======== main end ========== -->
+	<footer class="footer_wrap">
+		<div class="wrap_inner">
+			<div class="footer_content">
+				<ul>
+					<li><a href="">关于我们</a></li>
+					<li><a href="">微博</a></li>
+					<li><a href="">微信号</a></li>
+					<li><a href="">bilibili</a></li>
+					<li><a href="">Team</a></li>
+					<li><a href="">反馈</a></li>
+				</ul>
+			</div>
+		</div>
+	</footer>	
+	<script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
 </body>
 </html>
