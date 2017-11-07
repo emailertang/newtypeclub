@@ -25,5 +25,6 @@ urlpatterns = [
     url(r'^project_details/$',views.details,name="project_details"),
     url(r'^current_defines/$',views.current_defines,name="current_defines"),
     url(r'^create_newdefine/$',views.create_newdefine,name="create_newdefine"),
-    url(r'^define_detail/$',views.define_detail,name="define_detail")
+    url(r'^define_detail/$',views.define_detail,name="define_detail"),
+    url(r'^testmodel/$',views.testmodel)
 ]
