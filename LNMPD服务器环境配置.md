@@ -503,3 +503,67 @@ yum-builddep yum-debug-dump yumdownloader
 #!/usr/bin/python 改为 #!/usr/bin/python2
 ```
 
+## 9.virtualenv
+
+```shell
+pip install virtualenvwrapper
+pip install virtualenvwrapper-win　　#Windows使用该命令
+#第一行：virtualenvwrapper存放虚拟环境目录
+#第二行：virtrualenvwrapper会安装到python的bin目录下，所以该路径是python安装目录下bin/virtualenvwrapper.sh
+
+
+1，先yum intall virtualenv
+2，然后pip install virtualenvwrapper
+安装完需要配置：
+[plain] view plain copy
+vim ~/.bash_profile  
+
+下面代码添加到后面
+Shell Startup File
+
+Add three lines to your shell startup file (.bashrc, .profile, etc.) to set the location where the virtual environments should live, the location of your development project directories, and the location of the script installed with this package:
+[plain] view plain copy
+#virtualenvwrapper   
+export WORKON_HOME=$HOME/virtualenvs # 虚拟环境存放位置自己指定   
+source /usr/bin/virtualenvwrapper.sh # 指定virtualenvwrapper的执行文件路径  
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python # 系统python2.7执行文件位置，根据自己环境而定   
+export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages' # 启动时候指定参数，就是我们用的独立于系统的安装包   
+export PIP_VIRTUALENV_BASE=$WORKON_HOME # 告知pip virtualenv的位置   
+export PIP_RESPECT_VIRTUALENV=true # 执行pip的时候让系统自动开启虚拟环境   
+
+
+After editing it, reload the startup file (e.g., run source ~/.bashrc).
+执行：
+[plain] view plain copy
+source ~/.bash_profile  
+
+这里我没理解，我直接在shell里运行这三个命令也是可以的
+
+-------------------------------------------------------------------------------------------------------------------------安装和配置完了
+
+下面是使用：
+[plain] view plain copy
+mkvirtualenv demo1  
+  
+workon 切换到环境  
+  
+deactivate 注销当前环境  
+  
+lsvirtualenv 列出所有环境  
+  
+rmvirtualenv 删除环境  
+  
+cpvirtualenv 复制环境  
+  
+cdsitepackages cd到当前环境的site-packages目录  
+  
+lssitepackages 列出当前环境中site-packages内容  
+  
+setvirtualenvproject 绑定现存的项目和环境  
+  
+wipeenv 清除环境内所有第三方包  
+
+
+版权声明：本文为博主原创文章，未经博主允许不得转载
+```
+
