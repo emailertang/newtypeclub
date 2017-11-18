@@ -63,6 +63,17 @@ linux 目录结构
  chmod
  shutdown -h now
  reboot
+===========================================
+halt -p -d -i
+reboot -f
+shutdowm -h now
+poweroff
+===========================================
+find
+locate -ef |grep keyword
+whereis
+
+ 
 ```
 
 
@@ -237,7 +248,7 @@ http {
 
 
 
-## 4.Python
+## 4.Python2.7 & 3 安装
 
 ```shell
 rpm -ivh http://dl.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm # 在package无法找到的情况下执行这个
@@ -249,6 +260,7 @@ yum install -y openssl-devel&
 yum install -y gcc wget 
 yum groupinstall "Development tools"
 yum install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gdbm-devel db4-devel libpcap-devel xz-devel
+#--------------------------------------------------------------
 #安装setuptools
 wget https://pypi.python.org/packages/6b/dd/a7de8caeeffab76bacf56972b3f090c12e0ae6932245abbce706690a6436/setuptools-28.3.0.tar.gz
 tar xzf setuptools-28.3.0.tar.gz
@@ -263,19 +275,152 @@ cd Python-2.7.12/
 ./configure --prefix=/usr/local/python3
 make
 make install
+
+#--------------------------------------------------------------
+
 #建立链接
 ln -s /usr/local/python2.7/bin/python2.7 /usr/local/bin/python #由于系统自带的python路径是/usr/bin/python。PATH中，/usr/local/bin比/usr/bin靠前，所以当你输入python，系统会自动启动你安装的python2.7.12。
+#另一种建立连接方式
+mv /usr/bin/python /usr/bin/python2.6.6
+ln -s /usr/local/python2.7/bin/python2.7 /usr/bin/python
 echo $PATH
 /usr/lib64/qt-3.3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/root/bin
 #!/bin/env python #在python脚本中，你可以使用env来搜寻python
 #!/usr/local/bin/python 这样，CentOS7.2调用的也是你安装的2.7.12。好处是当你在别的环境里运行，不需要改第一行也能执行。当然你也可以使用绝对路径：
+
+#--------------------------------------------------------------
+#升级pip
+pip install --upgrade pip
+#更改pip源
+linux下，修改 ~/.pip/pip.conf (没有就创建一个)， 修改 index-url至tuna，内容如下：
+ [global]
+ index-url = https://pypi.tuna.tsinghua.edu.cn/simple
+ 
+windows下，直接在user目录中创建一个pip目录，如：C:\Users\xx\pip，新建文件pip.ini，内容如下
+ 
+ [global]
+ index-url = https://pypi.tuna.tsinghua.edu.cn/simple
+ 
+#-------------------------------------------------------------- 
+ 
+#解决yum的依赖问题 
+#vi /usr/bin/yum  
+将文件头部的
+#!/usr/bin/python
+改成
+#!/usr/bin/python2.6.6
+
+
+#安装pip
+wget --no-check-certificate https://bootstrap.pypa.io/get-pip.py
+sudo python get-pip.py
+```
+
+```shell
+#CENTOS 6.X 系列默认安装的 Python 2.6 ，而目前主流开发软件都在使用Python-2.7。所以对于一些软件的安装来说（例如最新的graphite），就需要升级系统默认的python。
+一、升级python：
+查看pytohn版本：
+[html] view plain copy
+#python  -V      
+Python 2.6.6   
+
+1、下载、解压：
+[html] view plain copy
+<pre name="code" class="html"><span style="font-family: Consolas, 'Courier New', Courier, mono, serif; line-height: 18px;">#wget http://python.org/ftp/python/2.7.3/Python-2.7.3.tar.bz2</span>  
+[html] view plain copy
+#tar -jxvf Python-2.7.3.tar.bz2    
+2、安装前准备：
+1）安装openssl，解决在安装Python2.7时报错ImportError: cannot import name HTTPSHandler
+[html] view plain copy
+#yum install openssl openssl-devel -y  
+2）安装zlib，解决安装Python-2.7对应的easy_install和pip时报错：
+[html] view plain copy
+# yum install zlib zlib-devel readline readline-devel -y  
+3）安装sqlite-devel：
+[html] view plain copy
+# yum install sqlite-devel  
+3、安装：
+[html] view plain copy
+# cd Python-2.7.3  
+# ./configure  
+# make  
+  
+# make install  
+4、配置环境：
+1）建立软连接，使系统默认的 python指向 python2.7：
+[html] view plain copy
+#mv/usr/bin/python /usr/bin/python2.6.6   
+#ln-s /usr/local/bin/python2.7 /usr/bin/python  
+2） 查看/usr/bin/目录下python信息：
+[html] view plain copy
+#ll /usr/bin/python*  
+lrwxrwxrwx  1 root root  24 May 22 21:30 /usr/bin/python -> /usr/local/bin/python2.7  
+lrwxrwxrwx.1 root root    6 Mar  9  2015/usr/bin/python2 -> python  
+-rwxr-xr-x.2 root root 9032 Jan 22  2014/usr/bin/python2.6  
+-rwxr-xr-x.2 root root 9032 Jan 22  2014/usr/bin/python2.6.6  
+ 3）由于yum没有兼容python2.7，修改yum文件：
+[html] view plain copy
+vi /usr/bin/yum，第一行  
+#!/usr/bin/python  
+修改为：  
+#!/usr/bin/python2.6.6  
+4）退出当前控制台，重新登录后查看python版本：
+[html] view plain copy
+#python -V  
+Python2.7.3  
+参考：http://blog.csdn.net/jcjc918/article/details/11022345
+
+二、安装easy_instll和pip：
+1、安装easy_install：
+[html] view plain copy
+#wget https://pypi.python.org/packages/source/s/setuptools/setuptools-7.0.zip--no-check-certificate  
+#unzip setuptools-7.0.zip  
+#cd setuptools-7.0  
+#python setup.py install  
+最后提示如下信息表示安装成功：
+Installed/usr/local/lib/python2.7/site-packages/setuptools-7.0-py2.7.egg
+Processingdependencies for setuptools==7.0
+Finishedprocessing dependencies for setuptools==7.0
+3、安装pip：
+[html] view plain copy
+#wget --no-check-certificate https://github.com/pypa/pip/archive/1.5.5.tar.gz  
+#tar -xvzf 1.5.5.tar.gz  
+#cd pip-1.5.5/  
+#python setup.py  install  
+最后提示如下信息表示安装成功：
+Installed/usr/local/lib/python2.7/site-packages/pip-1.5.5-py2.7.egg
+Processingdependencies for pip==1.5.5
+Finishedprocessing dependencies for pip==1.5.5
+3）验证：
+需要退出当前控制台窗口，重新登录后，输入如下命令：
+[html] view plain copy
+#easy_install --version  
+setuptools7.0  
+#pip -V  
+pip1.5.5 from /usr/local/lib/python2.7/site-packages/pip-1.5.5-py2.7.egg (python2.7)  
+```
+
+## 5.virtualenv
+
+```shell
+mkdir $HOME/.virtualenvs
+vim .bashrc
+export WORKON _HOME=$HOME/.virtualenvs
+source /usr/local/python2.7/bin/virtualenvwrapper.sh #先locate virtualenvwrapper.sh
+workon py2env
+source .bashrc
+
+mkvirtualenv #创建虚拟环境
+mkvirtualenv -p /usr/bin/python py2env
+#如果系统找不到virtualenv，则自己建立连接
+sudo ln -s /usr/local/python2.7/bin/virtualenv /usr/local/bin/virtualenv
+workon
+deactivate 
 ```
 
 
 
-
-
-## 5.Mysql（Mariadb）
+## 6.Mysql（Mariadb）
 
 ```mysql
 yum -y install mariadb mariadb-server #
