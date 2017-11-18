@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from django.shortcuts import render
 from django.http import HttpResponse
-from shuoyar.models import Auther,Book,Publisher
+from shuoyar.models import Author,Book,Publisher
 
 
 
@@ -26,7 +26,7 @@ def testmodel(request):
     # b.title = '魔戒'
     # b.publisher = p
     # b.publication_date = '2017-04-05'
-    a = Auther.objects.get(name ='托尔金')
+    a = Author.objects.get(name ='托尔金')
     b.authors.add(a)
     b.save()
     return HttpResponse('<h1>complect</h1>')
