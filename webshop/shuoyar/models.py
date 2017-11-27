@@ -24,16 +24,11 @@ class Author(models.Model):
 
 class Book(models.Model):
     title = models.CharField(max_length=100)
-<<<<<<< HEAD
     author = models.ManyToManyField(Author)
     publisher = models.ForeignKey(Publisher)
     publication_date = models.DateField()
     book_info = models.OneToOneField('Book_info',null=True)
-=======
     authors = models.ManyToManyField(Auther,null=True)
-    publisher = models.ForeignKey(Publisher,null=True)
-    publication_date = models.DateField(auto_now_add=True)
->>>>>>> b21642d7f09f5f0b40bf0c91777557bfe5fd07ee
     def __str__(self):
         return self.title
 class Book_info(models.Model):
